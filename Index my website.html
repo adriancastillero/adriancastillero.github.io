@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body style="background-color:#66CCFF;">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+* {box-sizing: border-box;}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {  
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
+  }
+  .topnav a, .topnav input[type=text], .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+}
+</style>
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+ 
+* {
+  box-sizing: border-box;
+}
+ 
+img {
+  vertical-align: middle;
+}
+ 
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+ 
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+ 
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+ cursor: pointer;
+}
+ 
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+ 
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+ 
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+ 
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+ 
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+ 
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+ 
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+ 
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+ cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+<body>
+
+
+
+<style>
+
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+</style>
+
+  <div class="mySlides">
+    <div class="numbertext">1 / 2</div>
+    <img src="images/dubai.skyline.day.jpg" style="width:100%">
+   
+  </div>
+
+ <div class="centered"><font size="100" color=#12A0EC ><font face="Copperplate">Relocating to the UAE</font></font></div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 2</div>
+    <img src="images/mosque.abudhabi.night.jpg" style="width:100%" >
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  
+</div>
+
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo cursor");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+ }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+</head>
+   
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">   Home   </a>
+  <a href="#about">Communities</a>
+  <a href="#contact">Banks</a>
+  <a href="#contact">Car Rental</a>
+  <a href="#contact">Entertainment</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+<style>
+
+
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #66CCFF;
+  padding-left: 20px;
+}
+
+
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #FFFFFF;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>ABOUT THE U.A.E</h2>
+      <h5>By: Adrian Castillero 10D</h5>
+      <p>The main history</p>
+      <p>The UAE was established in 1971 when the seven Sheikhs of each emirate came together and created the United Arab Emirates. The UAE has seven emirates and each one has one sheikh, which is the ruler. The seven Emirates of the UAE are: Dubai, Abu Dhabi, Ajman, Sharjah, Umm Al Quwain, Al Ain, Fujairah. The UAE has a total population of 9.4 million and its capital is Abu Dhabi. The total area of the UAE is 83,000 km² and it shares borders with Qatar, Saudi Arabia and Oman. The UAE is an active leading country in the field of clean and renewable energy worldwide. Its immense efforts culminated by choosing Abu Dhabi to host the headquarters of the International Renewable Energy (Irena)</p>
+<img src="images/uaemap.jpg">
+    </div>
+    <div class="card">
+      <h2>The Laws of the UAE</h2>
+      <h5>The UAE have many laws that are very strict in order to make the country a safer place and a better place to live</h5>
+      <p>The UAE is a country with many laws and regulations and even though some people might not like these laws it is all for the better of the country, so that it can become a better and safer place for both single expats and families. Some of these strict laws are: No swearing in public, no fireworks, checking someones phone is also illegal and it also comes with a fine</p>
+<img src="images/uaelaws.jpg">
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Hello my name is Adrian Castillero and I am a yr10 student studying at Dubai International Academy. I was born in Spain but moved to Dubai when I was 6 years old. I have been living here ever since, and have been attending DIA for 7 years. </p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+      <div class="fakeimg"><p>Image</p></div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Visit us at <a href="https://www.w3schools.com/html/html_links.asp">relocatingtouae@gmail.com</a></h2>
+</div>
+
+
+
+</body>
+</html>
